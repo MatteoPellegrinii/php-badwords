@@ -16,7 +16,7 @@ $replace = str_replace($parola, "***", $paragrafo)
 </head>
 <body>
     <h3>Questo è il mio paragrafo:  <br> <?php echo $replace ?>   </h3>
-    <h3>E' lungo: <?php echo strlen($paragrafo) ?> caratteri </h3>
+    <h3>E' lungo: <?php echo strlen($replace) ?> caratteri </h3>
     <form action="" method="get" >
         <label for="parola">Parola:</label>
         <input type="text" name="parola" id="parola">
