@@ -1,7 +1,9 @@
 <?php 
-
-$paragrafo = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio porro, tempora sint eius ducimus ipsa inventore minima voluptatum doloribus pariatur veritatis omnis similique sunt sequi ullam sit? Harum, quibusdam magni.'
+$paragrafo = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio porro, tempora sint eius ducimus ipsa inventore minima voluptatum doloribus pariatur veritatis omnis similique sunt sequi ullam sit? Harum, quibusdam magni.';
+$parola = $_GET['parola'];
+$replace = str_replace($parola, "***", $paragrafo)
 ?>
+
 
 
 <!DOCTYPE html>
@@ -13,13 +15,12 @@ $paragrafo = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio por
     <title>Document</title>
 </head>
 <body>
-    <h3>Questo è il mio paragrafo:  <br> <?php echo $paragrafo ?>   </h3>
+    <h3>Questo è il mio paragrafo:  <br> <?php echo $replace ?>   </h3>
     <h3>E' lungo: <?php echo strlen($paragrafo) ?> caratteri </h3>
     <form action="" method="get" >
         <label for="parola">Parola:</label>
         <input type="text" name="parola" id="parola">
         <button>Nascondi parola</button>
     </form>
-    
 </body>
 </html>
